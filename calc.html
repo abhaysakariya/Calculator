@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Abhay</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Calculator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    </div>
+    <br><br>
+    <div class="container jumbotron rounded bg-light border">
+        <center>
+            <h3>Calculator</h3>
+            <br>
+            <div class="input-group">
+                <textarea id="display" class="form-control" aria-label="With textarea" id="text"
+                    style="height: 112px;"></textarea>
+            </div><br><br>
+            <button style="height:40px; width: 105px;" value="c" id="clear" type="button"
+                class="btn" onclick="clearfunc()">C</button>
+            <button style="height:40px; width: 50px;" value="b" id="back" type="button"
+                class="btn" onclick="backfunc()"><-</button>
+            <button style="height:40px; width: 50px;" value="%" id="funcper" type="button"
+                class="btn" onclick="disnum('%')">%</button><br>
+            
+
+            <button style="height:40px; width: 50px; margin-top: 10px;" value="1" id="func1" type="button" class="btn"
+                onclick="disnum(1)" onmouseover="mouseon()" onmouseout="mouseoff()">1</button>
+            <button style="height:40px; width: 50px; margin-top: 10px;" id="func2" value="2" type="button" class="btn"
+                onclick="disnum(2)">2</button>
+            <button style="height:40px; width: 50px; margin-top: 10px;" id="func3" value="3" type="button" class="btn"
+                onclick="disnum(3)">3</button>
+            <button style="height:40px; width: 50px; margin-top: 10px;" id="funcp" value="+" type="button" class="btn"
+                onclick="disnum('+')">+</button><br>
+
+            <button style="height:40px; width: 50px; margin-top: 10px;" value="4" id="func4" type="button"
+                class="btn" onclick="disnum(4)">4</button>
+            <button style="height:40px; width: 50px; margin-top: 10px;" value="5" id="func5" type="button"
+                class="btn" onclick="disnum(5)">5</button>
+            <button style="height:40px; width: 50px; margin-top: 10px;" value="6" id="func6" type="button"
+                class="btn" onclick="disnum(6)">6</button>
+            <button style="height:40px; width: 50px; margin-top: 10px;" value="-" id="funcm" type="button"
+                class="btn" onclick="disnum('-')">-</button><br>
+
+            <button style="height:40px; width: 50px; margin-top: 10px;" value="7" id="func7" type="button"
+                class="btn" onclick="disnum(7)">7</button>
+            <button style="height:40px; width: 50px; margin-top: 10px;" value="8" id="func8" type="button"
+                class="btn" onclick="disnum(8)">8</button>
+            <button style="height:40px; width: 50px; margin-top: 10px;" value="9" id="func9" type="button"
+                class="btn" onclick="disnum(9)">9</button>
+            <button style="height:40px; width: 50px; margin-top: 10px;" value="x" id="funcx" type="button"
+                class="btn" onclick="disnum('*')">X</button><br>
+
+            <button style="height:40px; width: 50px; margin-top: 10px;" value="." id="funcd" type="button"
+                class="btn" onclick="disnum('.')">.</button>
+            <button style="height:40px; width: 50px; margin-top: 10px;" value="0" id="func0" type="button"
+                class="btn" onclick="disnum(0)">0</button>
+            <button style="height:40px; width: 50px; margin-top: 10px;" value="=" id="funce" type="button"
+                class="btn" onclick="funcequal()">=</button>
+            <button style="height:40px; width: 50px; margin-top: 10px;" value="/" id="funcd" type="button"
+                class="btn" onclick="disnum('/')">/</button><br>
+
+            
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

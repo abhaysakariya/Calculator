@@ -1,0 +1,12 @@
+btn{
+  background-color:dodgerblue;
+}
+
+
+.btn:hover{
+  background-color: greenyellow;
+}
+
+.btn:focus{
+  background-color: crimson;
+}
